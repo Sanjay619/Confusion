@@ -8,9 +8,9 @@ function Menu (props){
     
     
     renderItem = ({ item, index }) => (
-       <TouchableOpacity style={styles.itemStyle}>
+       <TouchableOpacity style={styles.itemStyle} onPress = {() => props.onPress(item.id)}>
           <View style = {styles.itemNameView} >
-           <Avatar size = {70} source={{uri: item.image}} />
+           <Avatar size = {70} rounded source = {{ uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'}} />
            <Text style={[ styles.title ]}>{item.name}</Text>
            </View>
            <Text style={[ styles.desc ]}>{item.description}</Text>
